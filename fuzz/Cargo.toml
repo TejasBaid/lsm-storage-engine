@@ -1,0 +1,32 @@
+[package]
+name = "lsm-engine-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+arbitrary = { version = "1", features = ["derive"] }
+libfuzzer-sys = "0.4"
+lsm-engine = { path = "..", default-features = false }
+tempfile = "3"
+
+# Keep the fuzz crate out of any parent workspace.
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "decoders"
+path = "fuzz_targets/decoders.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "db_ops"
+path = "fuzz_targets/db_ops.rs"
+test = false
+doc = false
+bench = false
