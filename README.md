@@ -1,6 +1,5 @@
 # lsm-engine
 
-[![CI](https://github.com/TejasBaid/lsm-storage-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/TejasBaid/lsm-storage-engine/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 `lsm-engine` is an embeddable, crash-safe key-value storage engine written in Rust, built on a
